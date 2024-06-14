@@ -96,9 +96,9 @@ The keyscan_start command starts the keylogging feature on the remote machine.
 
  <SHIFT> www.baclaysbank.co.uk
  
- <SHIFT>yinkajah@gmail.com
+ <SHIFT>username> shift><yinkajah@gmail.com
  
- <CR> R2jshb!@(*&^HB
+ <CR>password><tap> R2jshb!@(*&^HB
  
  <CR>pin: 126782
  
