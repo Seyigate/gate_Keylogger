@@ -33,7 +33,7 @@ Finally, the threat actor will be able to use payloads installed on the targeted
 # **Content**
 * [Building the keylogger using Metasploit-framework](https://github.com/Seyigate/gate_Keylogger/blob/main/Building%20the%20keylogger%20using%20Metasploit-framework)
 
-* ## gate_keylogger
+## gate_keylogger
 The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework see- [metasploit-unleashed](https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
 
 Metasploit is handy for generating a reverse shell. The following command generates a reverse TCP shell with the Metasploit framework:
