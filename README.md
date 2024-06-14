@@ -12,6 +12,6 @@ Keyloggers are a particularly insidious type of program that can record and stea
 
 The term keylogger, or “keystroke logger,” is self-explanatory: Software that logs what you type on your keyboard. However, keyloggers can also enable you to eavesdrop on you, watch you on your system camera, or listen over your smartphone’s microphone.
 
-
+# **Content**
 
 
