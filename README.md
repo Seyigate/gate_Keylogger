@@ -92,13 +92,19 @@ The keyscan_start command starts the keylogging feature on the remote machine.
 ```
  Dumping capture keystrokes ...
 
+ See the capturing kestrokes below
+
  <SHIFT> www.baclaysbank.co.uk
+ 
  <SHIFT>yinkajah@gmail.com
+ 
  <CR> R2jshb!@(*&^HB
+ 
  <CR>pin: 126782
+ 
  snip....
 
- For more details see * [Building the keylogger using Metasploit-framework](https://github.com/Seyigate/gate_Keylogger/blob/main/Building%20the%20keylogger%20using%20Metasploit-framework)
+ For more details see *[Building the keylogger using Metasploit-framework](https://github.com/Seyigate/gate_Keylogger/blob/main/Building%20the%20keylogger%20using%20Metasploit-framework)*
 
 
    
