@@ -11,7 +11,7 @@ Seyigate will not be liable to any destructive occurrence in the network and sys
 
 **Introduction** 
 
-This project created a $${\color{red}Keylogger using Metasploit framework, uses payload as mode of operation.
+This project created a $${\color{red}Keylogger$$ using Metasploit framework, uses payload as mode of operation.
 
 A payload is a piece of code that executes when hackers exploit a vulnerability. In other words, it’s an exploit module. It’s usually composed of a few commands that will run on the targeted operating system to steal data and other malicious acts.
 
