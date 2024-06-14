@@ -8,6 +8,8 @@ Help suport this project!!!
 This project should be only take place in a control environment and written permission must be given by the system owner.
 Seyigate will not be liable to any destructive occurrence in the network and system infrastructure. 
 
+Check out below to learn how to use the metasploit framework. This project was explained in a simplex term and proof of concept included, however they work great! Feel free to fork and improve it if you want. Be sure to check out the [issues](https://github.com/Seyigate/gate_Keylogger/issues) or [pull requests](https://github.com/Seyigate/gate_Keylogger/pulls) to see if your problem has been fixed, or to help out others.
+
 
 **Introduction** 
 
