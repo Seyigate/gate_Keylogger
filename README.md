@@ -20,7 +20,13 @@ Keyloggers are a particularly insidious type of program that can record and stea
 The term keylogger, or “keystroke logger,” is self-explanatory: Software that logs what you type on your keyboard. However, keyloggers can also enable you to eavesdrop on you, watch you on your system camera, or listen over your smartphone’s microphone.
 
 It’s not unlikely to find harmful payloads in an email attachment. One of the most effective ways to attack or compromise targeted system infrastructure is via phishing email 
+
 **send emails with an attached .pdf file containing a malicious payload <sup>**keylogger**</sup> that will install a backdoor.**
+
+If the victim downloads the file and double-clicks to open it, which will triggers the code in the background. This allows for serving a shell to access the victim’s computer when the victim sends a TCP connection.
+
+Finally, the threat actor will be able to use payloads installed on the targeted machine to record and steal consecutive keystrokes (and much more) that the user enters on a device such as bank user credentials and lot more. 
+
 
 # **Content**
 * [Building the keylogger using Metasploit-framework](https://github.com/Seyigate/gate_Keylogger/blob/main/Building%20the%20keylogger%20using%20Metasploit-framework)
