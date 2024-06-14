@@ -1,1 +1,1 @@
-# Building a keylogger using $${\color{Metasploit framework}Red}$$
+# $$Building a keylogger using Metasploit framework$$
