@@ -2,7 +2,7 @@ Building the keylogger using Metasploit-framework
 
 PART 1
 Log in to kali linux software
-The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework[(see https://www.offsec.com/metasploit-unleashed/existing-scripts/)]
+The aim is to create a payload called Meterpreter using Inbuilt Metasploit-framework, To learn more click [Meterpreter](https://www.offsec.com/metasploit-unleashed/existing-scripts/)
 
 
  Meterpretershell
